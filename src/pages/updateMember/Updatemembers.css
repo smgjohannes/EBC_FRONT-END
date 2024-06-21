@@ -1,0 +1,74 @@
+/* memberForm.css */
+.headerUpdate {
+  margin: 20px;
+}
+form {
+  position: relative;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.close-btn {
+  background-color: red !important;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 29px;
+  cursor: pointer;
+  width: 40px;
+}
+
+.close-btn:hover {
+  color: white;
+}
+
+.form-group-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  width: 98%;
+}
+
+.form-group {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.file-upload {
+  margin-top: 10px;
+}
+
+.file-upload-input {
+  width: 38% !important;
+}
+
+.submit-button {
+  display: block;
+  width: 25% !important;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #0b7901e5;
+}

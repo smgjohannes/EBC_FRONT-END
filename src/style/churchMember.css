@@ -1,0 +1,140 @@
+/* Overall container */
+.post-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff; /* White background */
+
+  align-items: center; /* Center content horizontally */
+  margin: 0 20px;
+  width: 75%;
+}
+
+/* Content section */
+.post-content {
+  width: 100%; /* Matches Bootstrap's w-50 */
+  background-color: #eee; /* Light gray background */
+  border-radius: 5px; /* Rounded corners */
+  padding: 20px; /* Inner padding */
+}
+
+/* Add button */
+.add-button {
+  background-color: #4caf50; /* Green color */
+  color: white; /* White text */
+  padding: 8px 20px; /* Padding around text */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Indicate clickable action */
+  margin-bottom: 15px; /* Add space below */
+  margin-left: 10px;
+
+  text-decoration: none;
+}
+
+/* Post table */
+.post-table {
+  width: 100%; /* Full width */
+  border-collapse: collapse; /* Table borders collapse */
+  border: 1px solid #ddd; /* Light gray border */
+}
+
+/* Table header */
+.post-table thead tr th {
+  padding: 10px; /* Padding for header cells */
+  text-align: left; /* Left-align text */
+  border-bottom: 1px solid #ddd; /* Light gray border on bottom */
+}
+
+/* Table body (empty in this example) */
+.post-table tbody tr td {
+  padding: 10px; /* Padding for body cells */
+  border-bottom: 1px solid #ddd; /* Light gray border on bottom */
+}
+.post-table tbody tr td:hover {
+  cursor: pointer;
+  padding: 10px; /* Padding for body cells */
+  border-bottom: 1px solid #ddd; /* Light gray border on bottom */
+}
+/* Post title */
+.post-title {
+  text-align: center; /* Center-align text */
+  font-size: 1.5rem; /* Adjust font size as needed */
+}
+.update-button {
+  background-color: #007bff; /* Blue color */
+  color: white; /* White text */
+  padding: 10px 20px; /* Padding around text */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Indicate clickable action */
+  font-size: 1rem; /* Adjust font size as needed */
+}
+.delete-button {
+  background-color: #dc3545; /* Red color */
+  color: white; /* White text */
+  padding: 10px 20px; /* Padding around text */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Indicate clickable action */
+  font-size: 1rem; /* Adjust font size as needed */
+  margin-left: 10px; /* Margin for spacing */
+}
+/* churchMember.css */
+.drawer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32% !important;
+}
+
+.drawer-content {
+  padding: 20px;
+  background: #ffffffc0;
+  align-items: start;
+}
+.drawer-content h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.column_container {
+  display: flex;
+}
+.drawer--column_container {
+  text-align: left;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #6b6b6b;
+  width: 190px;
+}
+.drawer-content .close-button {
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: red;
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  float: right;
+  color: white;
+  font-weight: 500;
+}
+.payment-button {
+  font-size: 14px;
+  cursor: pointer;
+  background-color: rgb(37, 33, 233);
+  padding: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+.image_holder {
+  margin: 20px 0;
+}
+.drawer-content img {
+  border-radius: 20px;
+  border: #007bff 4px solid;
+  height: 220px;
+  object-fit: cover;
+}
