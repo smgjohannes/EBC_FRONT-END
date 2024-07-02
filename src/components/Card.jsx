@@ -4,6 +4,7 @@ import { BiBadge, BiMoney } from 'react-icons/bi';
 
 const Card = () => {
   const [members, setMembers] = useState([]);
+  const [payments, setPayments] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -14,6 +15,7 @@ const Card = () => {
       .get('http://127.0.0.1:4343/api/v1/members', {
         headers: { Authorization: `Bearer ${token}` },
       })
+
       .then((response) => {
         setMembers(response.data);
         setLoading(false);
@@ -40,6 +42,7 @@ const Card = () => {
     },
     {
       title: 'Financial',
+      total: payments.length,
       icon: <BiMoney />,
     },
   ];

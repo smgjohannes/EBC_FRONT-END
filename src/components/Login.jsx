@@ -20,7 +20,6 @@ function Login() {
     event.preventDefault();
     const validationErrors = validation(values);
     setErrors(validationErrors);
-    console.log(values);
     if (Object.keys(validationErrors).length === 0) {
       try {
         const response = await axios.post(
@@ -28,10 +27,8 @@ function Login() {
           values
         );
         if (response.data.success) {
-          const token = response.data.token.access_token; // Extract token from response
-          console.log('Received token:', token);
-          localStorage.setItem('token', token); // Store token in localStorage
-          console.log('Received token:', localStorage);
+          const token = response.data.token.access_token;
+          localStorage.setItem('token', token);
           navigate('/dashboard');
         } else {
           setErrors({ server: response.data.message });

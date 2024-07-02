@@ -1,0 +1,11 @@
+.dashboard--content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+}
+.finance-dashboard--content {
+  padding: 20px;
+  background-color: white;
+  align-items: center;
+  border-radius: 20px;
+}

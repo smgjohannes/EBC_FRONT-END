@@ -6,6 +6,7 @@ import Sidebar from './Sidebar';
 import '../style/churchMember.css';
 import Profile from './Profile';
 import MemberDrawer from './Drawer';
+import ContentHeader from './ContentHeader';
 
 const ChurchMembers = () => {
   const [members, setMembers] = useState([]);
@@ -49,53 +50,60 @@ const ChurchMembers = () => {
       <Sidebar />
 
       <div className='dashboard--content'>
-        <div className='post-container'>
-          <div className='post-title'>List for Post</div>
-          <Link to='/createmember' className='add-button'>
-            Add +
-          </Link>
-          <div className='post-content'>
-            <table className='post-table'>
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Surname</th>
-                  <th>CellNo</th>
-                  <th>Id Number</th>
-                  <th>Status</th>
+        <div className='contentheade-post__container--holder'>
+          <ContentHeader />
+          <div className='post-container'>
+            <div className='post-title'>List for Post</div>
+            <Link to='/createmember' className='add-button'>
+              Add +
+            </Link>
+            <div className='post-content'>
+              <div className='post-table'>
+                {' '}
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Surname</th>
+                      <th>CellNo</th>
+                      <th>Id Number</th>
+                      <th>Status</th>
 
-                  <th>Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                {members.map((data, i) => (
-                  <tr key={i} onClick={() => handleRowClick(data)}>
-                    <td>{data.name}</td>
-                    <td>{data.surname}</td>
-                    <td>{data.cell_number}</td>
-                    <td>{data.id_number}</td>
-                    <td>{data.status}</td>
-                    <td>
-                      <Link
-                        to={`/updateMember/${data.id}`}
-                        className='update-button'>
-                        Update
-                      </Link>
-                      <button
-                        className='delete-button'
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          handleDelete(data.id);
-                        }}>
-                        Delete
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {members.map((data, i) => (
+                      <tr key={i} onClick={() => handleRowClick(data)}>
+                        <td>{data.name}</td>
+                        <td>{data.surname}</td>
+                        <td>{data.cell_number}</td>
+                        <td>{data.id_number}</td>
+                        <td>{data.status}</td>
+                        <td>
+                          <Link
+                            to={`/updateMember/${data.id}`}
+                            className='update-button'>
+                            Update
+                          </Link>
+                          <button
+                            className='delete-button'
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleDelete(data.id);
+                            }}>
+                            Delete
+                          </button>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
+
         <MemberDrawer
           isVisible={drawerVisible}
           member={selectedMember}

@@ -26,10 +26,10 @@ const Sidebar = () => {
           <BiListUl className='icon' />
           Member list
         </Link>
-        <a href='#' className='item'>
+        <Link to='/financepage' className='item'>
           <BiStats className='icon' />
-          Report
-        </a>
+          Finance
+        </Link>
         <a href='#' className='item'>
           <BiStats className='icon' />
           Stats

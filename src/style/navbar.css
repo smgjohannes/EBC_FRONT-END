@@ -1,0 +1,46 @@
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f1f1f1;
+  padding: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+
+  border-radius: 12px 12px 0 0;
+}
+
+.nav-tab {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+  border-radius: 10px;
+}
+
+.nav-tab.active {
+  background-color: #029b16;
+  color: white;
+}
+.nav-tab.active:hover {
+  background-color: #029b16;
+  color: white;
+}
+.nav-tab:hover {
+  background-color: #ddd;
+}
+
+.filter {
+  display: flex;
+  position: relative;
+  gap: 10px;
+  right: 2px;
+  margin: 15px;
+}
+
+.filter input {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
